@@ -1,0 +1,593 @@
+/* 
+Styling for Tino's Website Home Page 
+
+ft - font
+sz - size
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --light-orange: #FFB45B;
+    --dark-orange: #C97817;
+    --dark-grey: #8a8a8a;
+    --light-grey: #9C9C9C;
+    --light-blue: #B8D1DF;
+    --seashell-grey: #F2F0F0;
+    --deep-sea-green: #084D54;
+    --art-width: 25rem;
+}
+
+/* ::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: black;
+    height: 5%;
+} */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    /* overflow: overlay; */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+section {
+    height: 100%;
+    width: 100%;
+}
+
+.sect-desc {
+    /* General roperties of section descriptions under a section head. */
+    background-color: var(--deep-sea-green);
+    height: fit-content;
+    line-height: 1.875rem;
+    text-align: center;
+    padding: 5% 15% 5% 15%;
+}
+
+.sect-desc ol {
+    text-align: left;
+    text-indent: 30%;
+    line-height: 2.5rem;
+    list-style-type: none;
+}
+
+.sect-desc span {
+    padding: 0.35rem;
+    border-left: 1px solid var(--dark-orange);
+    border-bottom: 1px solid var(--dark-orange);
+    border-bottom-left-radius: 0.7rem;
+}
+
+/* 
+Start of text color definitions
+*/
+.color-light-orange {
+    color: var(--light-orange);
+}
+
+.color-dark-orange {
+    color: var(--dark-orange);
+}
+
+.color-white {
+    color: white;
+}
+
+.color-dark-grey {
+    color: var(--dark-grey);
+}
+
+.color-light-grey {
+    color: var(--light-grey);
+}
+
+.color-light-blue {
+    color: var(--light-blue);
+}
+/* 
+End of text color definitions
+*/
+
+
+/* 
+Start of font definitions 
+*/
+
+.ft-inter-light {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+.ft-inter-regular {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.ft-lato-light {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+.section-heading,
+.ft-lato-regular {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+.ft-fira-sans-extra-light {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 200;
+}
+
+.ft-fira-sans-light-italic {
+    font-family: 'Fira Sans', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.ft-fira-sans-regular {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+}
+
+.ft-indie-flower {
+    font-family: 'Indie Flower', cursive;
+    font-weight: 400;
+}
+
+.ft-sz-70 {
+    font-size: 4.375rem;
+}
+
+.section-heading,
+.ft-sz-40 {
+    font-size: 2.5rem;
+}
+
+.ft-sz-20 {
+    font-size: 1.25rem;
+}
+
+.ft-sz-15 {
+    font-size: 0.938rem;
+}
+
+/* 
+End of font definitions
+*/
+
+
+/* 
+Section 1 - Home Page
+
+Important: .section-heading is defined somewhere in the font size and font type definitions.
+            - it's basically hitch-hiking on other fonts.
+*/
+#welcome-section {
+    background-image: url(home-page-images/tino-bridge-16-9-aspect.jpg);
+    background-color: #CCCCCC;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+#welcome-msg-container {
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+}
+
+#welcome-description {
+    position: absolute;
+    width: 80%;
+    bottom: 5rem;
+    left: 5rem;
+}
+
+#welcome-menu-btn {
+    position: absolute;
+    font-size: 7rem;
+    top: 5rem;
+    right: 5rem;
+}
+
+/* 
+Section 2 - Me and Programming
+*/
+
+#coder-hands {
+    width: 50vw;
+    height: auto;
+    float: right;
+}
+
+#coder-hands img {
+    position: relative;
+    height: auto;
+    width: 100%;
+    border-bottom-left-radius: 5rem;
+}
+
+#me-prog-text-area {
+    position: relative;
+    width: 50vw;
+    height: 100vh;
+}
+
+#hel-wel-container {
+    position: relative;
+    top: 2rem;
+    display: flex;
+    width: 100%;
+}
+
+#hel-wel-container .hel-wel-lines {
+    position: relative;
+    display: inline-block;
+    width: 5.938rem;
+    height: 1rem;
+    top: -0.2rem;
+    margin: 0 60px 0 60px;
+    border-bottom: 1px solid var(--dark-grey);
+}
+
+#me-prog-head.section-heading {
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    text-align: center;
+}
+
+#me-prog-desc {
+    position: absolute;
+    top: 10rem;
+}
+
+#learn-more-btn {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    bottom: 3rem;
+    left: 20vw;
+}
+ 
+/* 
+unvisited link selected link 
+*/
+#learn-more-btn a:link, a:active {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid var(--dark-orange);
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+/* visited link */
+#learn-more-btn a:visited {
+    color: var(--deep-sea-green);
+}
+
+/* mouse over link */
+#learn-more-btn a:hover {
+    color: var(--dark-orange);
+    border-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.45);;
+}
+
+
+/* 
+Section 3 - Me and Art
+*/
+
+#me-art-section {
+    position: relative;
+    background-color: var(--seashell-grey);
+    height: 450vh;
+}
+
+/* 
+Group 1
+*/
+
+/* Mr Bean */
+#img-mr-bean {
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Mystery Shores */
+#img-mystery-shores {
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Taste */
+#img-taste {
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Forever */
+#img-forever {
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Bird */
+#img-bird {
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Boris Johnson*/
+#img-boris-johnson {
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Trevor Noah */
+#img-trevor-noah {
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Unmask */
+#img-unmask {
+    width: fit-content;
+    height: fit-content;
+}
+
+
+#me-art-section img {
+    position: relative;
+    width: var(--art-width);
+    height: auto;
+    border-radius: 1rem;
+}
+
+#me-art-head.section-heading {
+    position: absolute;
+    display: inline-block;
+    top: 10rem;
+    left: 5rem;
+}
+
+.me-art-desc {
+    display: inline-block;
+    position: absolute;
+    width: 25rem;
+    line-height: 4rem;
+}
+
+#me-art-desc-1{ 
+    top: 25rem;
+    left: 4rem;
+}
+
+#me-art-desc-2 {
+    top: 58rem;
+    right: 2rem;
+}
+#me-art-desc-3 {
+    top: 110rem;
+    left: 4rem;
+}
+#me-art-desc-4 {
+    top: 160rem;
+    right: 2rem;
+}
+
+.art-image-group {
+    position: absolute;
+    display: inline-block;
+}
+
+.art-image-group .column {
+    padding: 20px;
+    float: left;
+}
+
+
+#group-1.art-image-group {
+    top: 20vh;
+    right: 1rem;
+}
+
+#group-2.art-image-group {
+    padding-left: 10px;
+    top: 132vh;
+    left: 0rem;
+}
+
+#group-3.art-image-group {
+    top: 244vh;
+    right: 1rem;
+}
+
+#group-4.art-image-group {
+    padding-left: 20px;
+    top: 340vh;
+    left: 0;
+}
+
+
+/* 
+Section 4 - Curiosity and Radical Thinking
+*/
+
+#curiosity-cad-section {
+    position: relative;
+    background-color: black;
+    color: white;
+    height: 300vh;
+    width: 100vw;
+}
+
+#curiosity-rad-words {
+    display: inline-block;
+    position: absolute;
+    top: 8rem;
+    left: 5rem;
+}
+
+#deri-words {
+    display: inline-block;
+    position: absolute;
+    top: 27rem;
+    left: 5.2rem;
+}
+
+#why-learn-cad {
+    display: inline-block;
+    position: absolute;
+    top: 38rem;
+    left: 25%;
+    width: 50%;;
+    text-align: center;
+}
+
+.cad-images {
+    display: inline-block;
+    position: absolute;
+    left: 15%;
+    width: 100%;
+    height: auto;
+    border-radius: 3rem;
+}
+
+.cad-images img {
+    display: inline-block;
+    position: relative;
+    width: 70%;
+    height: auto;
+    border-radius: 3rem;
+}
+
+#cad-idea-1 {
+    top: 60rem;
+}
+
+#cad-idea-2 {
+    top: 95rem;
+}
+
+
+/* 
+Section 5 - Pablo Picasso quote
+*/
+
+#quote-section {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+#pablo-name {
+    display: inline-block;
+    position: relative;
+}
+
+#picasso-quote {
+    display: inline-block;
+    position: relative;
+    width: 60%;
+    height: auto;
+    top: 40vh;
+    left: 20%;
+
+}
+
+
+/* 
+Footer - Contact information, etc
+*/
+
+#home-footer {
+    position: relative;
+    background-color: var(--seashell-grey);
+    font-size: 1.5rem;
+    height: 65vh;
+    width: 100vw;
+}
+
+#home-footer a:link, a:visited{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#home-footer a:hover{
+    color: var(--dark-orange)
+}
+
+#home-footer a:active{
+    color: var(--deep-sea-green);
+}
+
+#footer-contacts {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 2rem;
+    padding-left: 8rem;
+}
+
+
+#footer-contacts div {
+    display: inline-block;
+
+}
+
+#tino-author {
+    position: absolute;
+    width: 10rem;
+    height: 5rem;
+    right: 2rem;
+    bottom: 2rem;
+    padding-left: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-left: 8px solid var(--dark-grey);
+    border-bottom: 3px solid var(--dark-grey);
+    border-bottom-left-radius: 2rem;
+}
+
+#tino-author div {
+    position: relative;
+    left: 10%;
+    top: 10%;
+}
+
