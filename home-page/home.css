@@ -299,7 +299,7 @@ Section 2 - Me and Programming
     height: 68%;
     line-height: 1.875rem;
     text-align: center;
-    padding: 5% 5% 5% 5%;
+    padding: 2% 5% 2% 5%;
 }
     
 #me-prog-desc ol {
@@ -635,7 +635,8 @@ Footer - Contact information, etc
     left: 0;
     top: 0;
     justify-content: space-around;
-    padding-top: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
     padding-left: 8vw;
 }
 
@@ -680,29 +681,39 @@ Media queries
 General queries
 */
 
-@media screen and (min-width:1350px) {
-    :root {
-        /* font-size: 15px; */
-        font-size: min(1.25vw, 3vh);
-    }
-    @media (max-height: 700px) {
 
-        :root {
-            font-size: 20px;
+
+@media screen and (min-width: 1000px) {
+    @media (max-height: 700px) {
+        
+        #welcome-msg-container {
+            line-height: 100px;
+        }
+        
+        #welcome-site-container {
+            line-height: 80px;
         }
     }
 }
 
-@media screen and (min-width: 1000px) {
-    @media (max-height: 700px) {
-
-        #welcome-msg-container {
-            line-height: 100px;
-        }
+@media screen and (min-width:1350px) {
+    :root {
+        /* font-size: 15px; */
+        font-size: min(1.1vw, 2.8vh);
+    }
     
-        #welcome-site-container {
-            line-height: 80px;
+    @media (max-height: 700px) {
+        
+        :root {
+            font-size: 16px;
         }
+    }
+}
+
+@media screen and (min-width:1800px) {
+    :root {
+        /* font-size: 15px; */
+        font-size: 20px;
     }
 }
 
@@ -716,7 +727,7 @@ General queries
 @media screen and (orientation: landscape) and (max-width:1350px) {
     :root {
         /* font-size: min(1.5vw, 3vh); */
-        font-size: 17px;
+        font-size: 15px;
     }
 
     #welcome-menu-btn {
@@ -724,7 +735,7 @@ General queries
     }
 
     #welcome-msg-container {
-        line-height: max(17vh, 119px);
+        line-height: max(16vh, 119px);
     }
 
 
@@ -841,7 +852,7 @@ General queries
     } */
     :root {
         /* font-size: min(1.6vw, 3vh); */
-        font-size: 15px;
+        font-size: 14px;
     }
     #welcome-section {
         background-attachment: scroll;
