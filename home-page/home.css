@@ -17,7 +17,13 @@ sz - size
     --light-blue: #B8D1DF;
     --seashell-grey: #F2F0F0;
     --deep-sea-green: #084D54;
-    --art-width: 25rem;
+    --art-width: 30vw;
+    --home-section-height: 100vh;
+    --prog-section-height: 100vh;
+    --art-section-height: 450vh;
+    --cad-section-height: 350vh;
+    --quote-section-height: 100vh;
+    --footer-height: 65vh;
 }
 
 /* ::-webkit-scrollbar {
@@ -36,13 +42,24 @@ sz - size
     background-color: black;
     height: 5%;
 } */
+/* , screen and (min-height: 700px) */
+:root {
+    font-size: min(1.3vw, 2.4vh);
+}
 
-body {
-    width: 100vw;
-    height: 100vh;
-    /* overflow: overlay; */
-    overflow-y: auto;
+
+html, body {
+    height: 100%;
     overflow-x: hidden;
+}
+
+#content-wrapper {
+    /* position: absolute; */
+    top: 0;
+    left: 0; 
+    /* width: 100%;
+    height: 100%; */
+    min-width: 300px;
 }
 
 .material-symbols-outlined {
@@ -54,31 +71,13 @@ body {
 }
 
 section {
-    height: 100%;
-    width: 100%;
-}
-
-.sect-desc {
-    /* General roperties of section descriptions under a section head. */
-    background-color: var(--deep-sea-green);
-    height: fit-content;
-    line-height: 1.875rem;
-    text-align: center;
-    padding: 5% 15% 5% 15%;
-}
-
-.sect-desc ol {
-    text-align: left;
-    text-indent: 30%;
-    line-height: 2.5rem;
-    list-style-type: none;
-}
-
-.sect-desc span {
-    padding: 0.35rem;
-    border-left: 1px solid var(--dark-orange);
-    border-bottom: 1px solid var(--dark-orange);
-    border-bottom-left-radius: 0.7rem;
+    /* height: 100%;
+    width: 100%; */
+    display: block;
+    min-height: 700px;
+    min-width: 300px;
+    width: 100vw;
+    position: relative;
 }
 
 /* 
@@ -159,12 +158,20 @@ Start of font definitions
 }
 
 .ft-sz-70 {
-    font-size: 4.375rem;
+    font-size: 4.9rem;
 }
 
 .section-heading,
 .ft-sz-40 {
     font-size: 2.5rem;
+}
+
+.ft-sz-art-desc {
+    font-size: 2.3rem;
+}
+
+.ft-sz-cad-why-learn {
+    font-size: 2rem;
 }
 
 .ft-sz-20 {
@@ -187,62 +194,83 @@ Important: .section-heading is defined somewhere in the font size and font type 
             - it's basically hitch-hiking on other fonts.
 */
 #welcome-section {
+    /* position: absolute; */
     background-image: url(home-page-images/tino-bridge-16-9-aspect.jpg);
     background-color: #CCCCCC;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
+    background-attachment: fixed;
+    /* top: 0;
+    left: 0; */
+    height: var(--home-section-height);
 }
 
 #welcome-msg-container {
     position: absolute;
     top: 5rem;
     left: 5rem;
+    width: 70vw;
+    /* line-height: 5rem; */
+    line-height: 15vh;
+}
+
+#welcome-site-container {
+    /* line-height: 4rem; */
+    line-height: 4rem;
+    padding-top: max(2.5vh, 20px);
+    padding-bottom: 2rem;
 }
 
 #welcome-description {
     position: absolute;
-    width: 80%;
-    bottom: 5rem;
+    bottom: 3rem;
     left: 5rem;
+    padding-right: 2rem;
 }
 
 #welcome-menu-btn {
+    display: block;
     position: absolute;
     font-size: 7rem;
     top: 5rem;
     right: 5rem;
 }
 
+
+
 /* 
 Section 2 - Me and Programming
 */
 
-#coder-hands {
-    width: 50vw;
-    height: auto;
-    float: right;
+#me-programming-section {
+    /* Poperties of section description under a Programming section head. */
+    /* position: relative; */
+    /* top: var(--home-section-height);
+    left: 0; */
+    height: var(--prog-section-height);
 }
 
-#coder-hands img {
-    position: relative;
-    height: auto;
-    width: 100%;
+#coder-hands {
+    width: 50%;
+    height: 100%;
+    float: right;
+    position: absolute;
+    right: 0vw;
+    top: 0vh;
+    background-image: url("home-page-images/programmer-hands.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
     border-bottom-left-radius: 5rem;
 }
 
-#me-prog-text-area {
-    position: relative;
-    width: 50vw;
-    height: 100vh;
-}
-
 #hel-wel-container {
-    position: relative;
-    top: 2rem;
+    width: 50%;
+    position: absolute;
+    top: 3%;
+    height: 3%;
     display: flex;
-    width: 100%;
+    justify-content: center;
 }
 
 #hel-wel-container .hel-wel-lines {
@@ -251,48 +279,73 @@ Section 2 - Me and Programming
     width: 5.938rem;
     height: 1rem;
     top: -0.2rem;
-    margin: 0 60px 0 60px;
+    margin: 0 100px 0 100px;
     border-bottom: 1px solid var(--dark-grey);
 }
 
 #me-prog-head.section-heading {
-    width: 100%;
+    width: 50%;
     position: absolute;
-    top: 5rem;
+    top: 9%;
+    height: 9%;
     text-align: center;
 }
 
 #me-prog-desc {
     position: absolute;
-    top: 10rem;
+    top: 18%;
+    background-color: var(--deep-sea-green);
+    width: 50%;
+    height: 68%;
+    line-height: 1.875rem;
+    text-align: center;
+    padding: 5% 5% 5% 5%;
 }
+    
+#me-prog-desc ol {
+    text-align: left;
+    line-height: 3rem;
+    list-style-type: none;
+}
+
+#me-prog-desc li {
+    display: inline;
+    float: left;
+    padding: 1rem 0 0 2rem;
+}
+    
+#me-prog-desc span {
+    padding: 0.6rem;
+    border-left: 1px solid var(--dark-orange);
+    border-bottom: 1px solid var(--dark-orange);
+    border-bottom-left-radius: 0.7rem;
+}
+
 
 #learn-more-btn {
     position: absolute;
-    width: fit-content;
+    width: 50%;
     height: fit-content;
-    bottom: 3rem;
-    left: 20vw;
+    bottom: 5%;
+    left: 0%;
+    text-align: center;
 }
  
 /* 
 unvisited link selected link 
 */
-#learn-more-btn a:link, a:active {
+#learn-more-btn a:link, a:active, a:visited {
     position: relative;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     cursor: pointer;
     padding: 10px 20px;
     border: 1px solid var(--dark-orange);
     border-radius: 15px;
     text-decoration: none;
     color: black;
-}
-
-/* visited link */
-#learn-more-btn a:visited {
-    color: var(--deep-sea-green);
 }
 
 /* mouse over link */
@@ -303,14 +356,18 @@ unvisited link selected link
 }
 
 
+
 /* 
 Section 3 - Me and Art
 */
 
 #me-art-section {
-    position: relative;
+    /* position: relative; */
     background-color: var(--seashell-grey);
-    height: 450vh;
+    height: var(--art-section-height);
+    min-height: 3600px;
+    /* top: calc(var(--home-section-height) + var(--prog-section-height));
+    left: 0; */
 }
 
 /* 
@@ -367,8 +424,8 @@ Group 1
 
 
 #me-art-section img {
-    position: relative;
     width: var(--art-width);
+    max-width: 450px;
     height: auto;
     border-radius: 1rem;
 }
@@ -376,38 +433,33 @@ Group 1
 #me-art-head.section-heading {
     position: absolute;
     display: inline-block;
-    top: 10rem;
+    top: 2rem;
     left: 5rem;
 }
 
 .me-art-desc {
     display: inline-block;
     position: absolute;
-    width: 25rem;
+    width: 30vw;
     line-height: 4rem;
 }
 
 #me-art-desc-1{ 
-    top: 25rem;
+    top: 5%;
     left: 4rem;
 }
 
 #me-art-desc-2 {
-    top: 58rem;
+    top: 30%;
     right: 2rem;
 }
 #me-art-desc-3 {
-    top: 110rem;
+    top: 55%;
     left: 4rem;
 }
 #me-art-desc-4 {
-    top: 160rem;
+    top: 85%;
     right: 2rem;
-}
-
-.art-image-group {
-    position: absolute;
-    display: inline-block;
 }
 
 .art-image-group .column {
@@ -415,28 +467,33 @@ Group 1
     float: left;
 }
 
+.art-image-group {
+    position: absolute;
+    display: inline-block;
+}
 
 #group-1.art-image-group {
-    top: 20vh;
+    top: 5%;
     right: 1rem;
 }
 
 #group-2.art-image-group {
     padding-left: 10px;
-    top: 132vh;
+    top: 30%;
     left: 0rem;
 }
 
 #group-3.art-image-group {
-    top: 244vh;
+    top: 55%;
     right: 1rem;
 }
 
 #group-4.art-image-group {
     padding-left: 20px;
-    top: 340vh;
+    top: 80%;
     left: 0;
 }
+
 
 
 /* 
@@ -444,33 +501,38 @@ Section 4 - Curiosity and Radical Thinking
 */
 
 #curiosity-cad-section {
-    position: relative;
+    /* position: relative; */
     background-color: black;
     color: white;
-    height: 300vh;
-    width: 100vw;
+    height: var(--cad-section-height);
+    min-height: 2400px;
+    /* top: calc(var(--home-section-height) + var(--prog-section-height) + var(--art-section-height));
+    left: 0; */
 }
 
-#curiosity-rad-words {
+#inspiring-words-wrapper {
     display: inline-block;
     position: absolute;
-    top: 8rem;
-    left: 5rem;
+    width: 100%;
+    height: fit-content;
+    top: 5%;
+    padding-left: 4rem;
+    padding-right: 1rem;
+}
+
+/* #curiosity-rad-words {
+    
 }
 
 #deri-words {
-    display: inline-block;
-    position: absolute;
-    top: 27rem;
-    left: 5.2rem;
-}
+} */
 
 #why-learn-cad {
     display: inline-block;
     position: absolute;
-    top: 38rem;
+    top: 30%;
     left: 25%;
-    width: 50%;;
+    width: 50%;
     text-align: center;
 }
 
@@ -478,25 +540,27 @@ Section 4 - Curiosity and Radical Thinking
     display: inline-block;
     position: absolute;
     left: 15%;
-    width: 100%;
+    width: 70%;
     height: auto;
-    border-radius: 3rem;
+    overflow-y: hidden;
+    overflow-x: auto;
 }
 
 .cad-images img {
     display: inline-block;
     position: relative;
-    width: 70%;
+    width: 100%;
+    min-width: 700px;
     height: auto;
     border-radius: 3rem;
 }
 
 #cad-idea-1 {
-    top: 60rem;
+    top: 45%;
 }
 
 #cad-idea-2 {
-    top: 95rem;
+    top: 72%;
 }
 
 
@@ -505,22 +569,25 @@ Section 5 - Pablo Picasso quote
 */
 
 #quote-section {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
+    /* position: absolute; */
+    height: var(--quote-section-height);
+    width: 100%;
+    min-height: 700px;
+    /* top: calc(var(--home-section-height) + var(--prog-section-height) + var(--art-section-height) + var(--cad-section-height));
+    left: 0vh; */
 }
 
 #pablo-name {
     display: inline-block;
-    position: relative;
+    position: absolute;
 }
 
 #picasso-quote {
     display: inline-block;
-    position: relative;
+    position: absolute;
     width: 60%;
     height: auto;
-    top: 40vh;
+    top: 30%;
     left: 20%;
 
 }
@@ -534,19 +601,22 @@ Footer - Contact information, etc
     position: relative;
     background-color: var(--seashell-grey);
     font-size: 1.5rem;
-    height: 65vh;
-    width: 100vw;
+    height: var(--footer-height);
+    min-height: 385px;
+    /* top: calc(var(--home-section-height) + var(--prog-section-height) + var(--art-section-height) + var(--cad-section-height) + var(--quote-section-height));
+    left: 0; */
 }
 
 #home-footer a:link, a:visited{
-    position: relative;
+    display: inline-block;
+    position: absolute;
     text-decoration: none;
     color: black;
-    position: relative;
-    width: 100%;
-    height: 100%;
+    width: fit-content;
+    height: auto;
     cursor: pointer;
 }
+
 
 #home-footer a:hover{
     color: var(--dark-orange)
@@ -557,19 +627,27 @@ Footer - Contact information, etc
 }
 
 #footer-contacts {
+    position: absolute;
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
+    left: 0;
+    top: 0;
     justify-content: space-around;
-    padding-top: 2rem;
-    padding-left: 8rem;
+    padding-top: 2vw;
+    padding-left: 8vw;
 }
 
 
 #footer-contacts div {
+    position: relative;
     display: inline-block;
-
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+    
 }
 
 #tino-author {
@@ -586,8 +664,375 @@ Footer - Contact information, etc
 }
 
 #tino-author div {
-    position: relative;
+    position: absolute;
     left: 10%;
-    top: 10%;
+    top: 30%;
 }
+
+/* 
+
+Media queries
+
+*/
+
+
+/* 
+General queries
+*/
+
+@media screen and (min-width:1350px) {
+    :root {
+        /* font-size: 15px; */
+        font-size: min(1.25vw, 3vh);
+    }
+    @media (max-height: 700px) {
+
+        :root {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    @media (max-height: 700px) {
+
+        #welcome-msg-container {
+            line-height: 100px;
+        }
+    
+        #welcome-site-container {
+            line-height: 80px;
+        }
+    }
+}
+
+/* @media screen and (orientation:portrait) {
+    :root {
+        font-size: 1.7vh;
+    }
+} */
+/* Section 2 - Me and Programming Section */
+
+@media screen and (orientation: landscape) and (max-width:1350px) {
+    :root {
+        /* font-size: min(1.5vw, 3vh); */
+        font-size: 17px;
+    }
+
+    #welcome-menu-btn {
+        top: 5rem;
+    }
+
+    #welcome-msg-container {
+        line-height: max(17vh, 119px);
+    }
+
+
+    #welcome-site-container {
+        line-height: max(10vh, 70px);
+    }
+
+    .me-art-desc {
+        font-size: 35px;
+        width: 28vw;
+    }
+
+    /* @media (max-height: 700px) {
+
+    }*/
+}
+
+@media screen and (max-width: 1200px) {
+    /* 
+    Art Section
+    */
+
+    #me-art-section img {
+        width: 300px;
+        height: auto;
+        border-radius: 1rem;
+    }
+    .me-art-desc {
+        width: 100vw;
+        text-align: center;
+        padding: 0 5% 0 5%;
+    }
+
+    #me-art-head.section-heading {
+        top: 2%;
+    }
+
+    #me-art-desc-1{ 
+        top: 5%;
+        left: 0;
+    }
+    
+    #me-art-desc-2 {
+        top: 30%;
+        right: 0;
+    }
+
+    #me-art-desc-3 {
+        top: 57%;
+        left: 0;
+    }
+
+    #me-art-desc-4 {
+        top: 82%;
+        right: 0;
+    }
+
+    .art-scroll-bundler .column {
+        float: none;
+        display: inline-block;
+        top: 0px;
+        width: 300px;
+        padding: 0px;
+        padding-left: 2%;
+    }
+
+    .art-scroll-bundler {
+        position: relative;
+        width: 710px;
+        height: 100%;
+        top: 0;
+        left: 15%;
+    }
+
+    .art-image-group {
+        position: absolute;
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 96%;  /* 40px from 4 paddings generated by two images in one group*/
+        height: 450px;
+        left: 2%;
+    }
+
+    #group-1.art-image-group {
+        top: 12%;
+        right: unset;
+    }
+
+    #group-2.art-image-group {
+        padding-left: 10px;
+        top: 40%;
+        left: unset;
+    }
+    
+    #group-3.art-image-group {
+        top: 64%;
+        right: unset;
+    }
+    
+    #group-4.art-image-group {
+        padding-left: 20px;
+        top: 86%;
+        left: unset;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    
+    /* 
+    Section 1: Home Page
+    */
+    /* * {
+        --prog-section-height: calc(var(--prog-section-height) + 40rem);
+    } */
+    :root {
+        /* font-size: min(1.6vw, 3vh); */
+        font-size: 15px;
+    }
+    #welcome-section {
+        background-attachment: scroll;
+    }
+
+    #welcome-menu-btn {
+        top: 5.5rem;
+    }
+
+    #welcome-msg-container {
+        line-height: max(12vh, 80px);
+    }
+
+
+    #welcome-site-container {
+        line-height: max(6rem, 50px);
+    }
+
+    #welcome-description {
+        bottom: 5rem;
+    }
+
+    /* 
+    CAD Curiosity section
+    */
+    .cad-images {
+        left: 3%;
+        width: 94%;
+        height: auto;
+    }
+    
+    .cad-images img {
+        width: 100%;
+        border-radius: 2rem;
+    }
+    
+    #cad-idea-1 {
+        top: 45%;
+    }
+    
+    #cad-idea-2 {
+        top: 72%;
+    }
+
+
+    /* @media (max-height: 700px) {
+        :root {
+            font-size: 13px;
+        }
+    } */
+
+}
+
+@media screen  and (max-width: 900px) {
+    
+        /* 
+    Section 2: Me and Programming
+    */
+
+    #me-programming-section {
+        height: calc(var(--prog-section-height) + 100vh);
+        min-height: 2000px;
+    }
+
+    #coder-hands {
+        display: block;
+        position: absolute;
+        float: none;
+        width: 80%;
+        height: 30%;
+        border-radius: 2rem;
+        top: 15%;
+        left: 10%;
+    }
+
+    #hel-wel-container {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    #me-prog-head.section-heading {
+        width: 100%;
+        top: 8%;
+    }
+
+    #me-prog-desc {
+        top: 50%;
+        width: 85%;
+        height: 32%;
+        border-radius: 2rem;
+        left: 7.5%;
+        line-height: 3rem;
+        font-size: 1.5rem;
+        
+    }
+    #me-prog-desc ol {
+        line-height: 4rem;
+    }
+
+    #learn-more-btn {
+        width: 100%;
+        bottom: 8.5%;
+        left: 0;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    /* 
+    CAD Curiosity Section
+    */
+    #why-learn-cad {
+        left: 10%;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    :root {
+        /* font-size: 2vw; */
+        font-size: 12px;
+    }
+
+    #welcome-msg-container {
+        left: 2rem;
+        width: 70vw;
+    }
+
+    #welcome-menu-btn {
+        right: 5rem;
+        top: max(5rem, 60px);
+    }
+
+    #welcome-description {
+        left: 2rem;
+        line-height: 3.5rem;
+    }
+
+    /* 
+    Footer
+    */
+
+    #home-footer {
+        height: 40vh;
+        min-height: 230px;
+    }
+
+    #home-footer a:link, a:visited {
+        font-size: 1.5rem;
+    }
+
+    #tino-author {
+        width: 6rem;
+        padding-left: 0.4rem;
+        padding-bottom: 0rem;
+        border-left: 5px solid var(--dark-grey);
+        border-bottom: 2px solid var(--dark-grey);
+    }
+}
+
+/* @media screen and (max-width: 600px) {
+    
+} */
+
+@media screen  and (max-width: 450px){
+    :root {
+        font-size: 10px;
+    }
+
+    #welcome-site-container {
+        padding-top: 17px;
+        line-height: 50px;
+    }
+
+    #welcome-menu-btn {
+        top: 7rem;
+        right: 1rem
+    }
+
+    .art-scroll-bundler {
+        left: 0%;
+    }
+
+    @media (max-height: 700px) {
+
+        #welcome-menu-btn {
+            top: 60px;
+        }
+    }
+}
+
+
+
 
