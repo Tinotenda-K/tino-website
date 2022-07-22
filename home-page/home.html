@@ -10,77 +10,92 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,400;1,300&family=Indie+Flower&family=Inter:wght@300;400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
+    <link rel="stylesheet" href="/node_modules/locomotive-scroll/dist/locomotive-scroll.css">
 </head>
-<body data-scroll-container>
-    <div id="content-wrapper">
+<body>
+    <div id="content-wrapper" data-scroll-container>
+        
         <section id="welcome-section" data-scroll-section>
-            <div class="ft-inter-light ft-sz-70" id="welcome-msg-container" data-scroll data-scroll-speed="-3">
-                <div id="hi-there-container" class="color-light-orange ">
-                    <span>Hi there.</span>
-                </div>
-                <div id="im-tino-container" class="color-white">
-                    <span>I'm Tino.</span>
-                </div>
-                <div id="welcome-site-container" class="color-white">
-                    <span>Welcome to my website</span>
-                </div>
-            </div>
+            <div>
+                <div class="ft-inter-light ft-sz-70" id="welcome-msg-container">
 
-            <div id="welcome-menu-btn" class="material-symbols-outlined color-light-orange">
-                menu
-            </div>
+                    <div id="hi-there-container" class="color-light-orange">
+                        <span class="welcome-word"  data-scroll data-scroll-direction="vertical" data-scroll-repeat data-scroll-speed="1" data-scroll-target="#welcome-section">Hi </span>
+                        <span class="welcome-word"  data-scroll data-scroll-direction="vertical" data-scroll-repeat data-scroll-speed="2" data-scroll-target="#welcome-section">there.</span>       
+                    </div>
 
-            <div id="welcome-description" class="ft-inter-light ft-sz-40" data-scroll data-scroll-speed="-1">
-                <span class="color-white">I mostly </span>
-                <span class="color-light-orange">program</span>
-                <span class="color-white">, design, create, develop, think, watch tv, play sports and draw</span>
+                    <div id="im-tino-container" class="color-white"  data-scroll data-scroll-direction="horizontal" data-scroll-repeat data-scroll-speed="-5" data-scroll-target="#welcome-section">
+                        <span class="welcome-word">I'm </span>
+                        <span class="welcome-word">Tino.</span>
+                    </div>
+
+                    <div id="welcome-site-container" class="color-white">
+                        <span class="welcome-word" data-scroll data-scroll-direction="vertical" data-scroll-target="#welcome-section" data-scroll-speed="-1" data-scroll-repeat>Welcome</span>
+                        <span class="welcome-word" data-scroll data-scroll-direction="horizontal" data-scroll-target="#welcome-section" data-scroll-speed="-1" data-scroll-repeat>to</span>
+                        <span class="welcome-word" data-scroll data-scroll-direction="vertical" data-scroll-target="#welcome-section" data-scroll-speed="-2" data-scroll-repeat>my</span>
+                        <span class="welcome-word" data-scroll data-scroll-direction="horizontal" data-scroll-target="#welcome-section" data-scroll-speed="-2" data-scroll-repeat>website</span>
+                    </div>
+                </div>
+
+                <div id="welcome-menu-btn" class="material-symbols-outlined color-light-orange">
+                    menu
+                </div>
+    
+                <div id="welcome-description" class="ft-inter-light ft-sz-40" data-scroll data-scroll-speed="2" data-scroll-target="#welcome-section" data-scroll-repeat>
+                    <span class="color-white">I mostly </span>
+                    <span class="color-light-orange">program</span>
+                    <span class="color-white">, design, create, develop, think, watch tv, play sports and draw</span>
+                </div>
             </div>
         </section>
-
+        
         <section id="me-programming-section" data-scroll-section>
+            <div>
+                <div id="coder-hands" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3" data-scroll-class="appear" data-scroll-repeat="true">
+                </div>
 
-            <div id="coder-hands">
+                <div id="hel-wel-container" class="ft-lato-light ft-sz-15">
+                    <span class="hel-wel-lines"></span>
+                    <span class="color-dark-grey">Hello </span>
+                    <span class="color-dark-orange">&nbspAND&nbsp</span>
+                    <span class="color-dark-grey">Welcome</span>
+                    <span class="hel-wel-lines"></span>
+                </div>
+
+                <h1 class="section-heading" id="me-prog-head">
+                    <span>Me and </span>
+                    <span class="color-dark-orange">Programming</span>
+                </h1>
+                
+                <div class="ft-fira-sans-regular ft-sz-15 color-light-blue" id="me-prog-desc">
+                    <p>I’m a programmer and I love coding. 
+                    I’m self-taught and I started when I was 13 years old. I’ve been in love ever since. 
+                    I don’t have a single particular area I specialise in, I’m interested in a lot of stuff.</p>
+
+                    <p>Some of the things I do are:</p>
+                    <ol>
+                        <li><span>Web Development</span></li>
+                        <li><span>App Development</span></li>
+                        <li><span>Machine Learning and AI</span></li>
+                        <li><span>Algorithms and Scripting</span></li>
+                        <li><span>Data Science, Databases, etc</span></li>
+                        <li><span>Robotics</span></li>
+                    </ol>
+                </div>
+
+                <div class="ft-fira-sans-light-italic ft-sz-15" id="learn-more-btn">
+                    <a href="#about">Learn more about me</a>
+                </div>
             </div>
-
-            <div id="hel-wel-container" class="ft-lato-light ft-sz-15">
-                <span class="hel-wel-lines"></span>
-                <span class="color-dark-grey">Hello </span>
-                <span class="color-dark-orange">&nbspAND&nbsp</span>
-                <span class="color-dark-grey">Welcome</span>
-                <span class="hel-wel-lines"></span>
-            </div>
-
-            <h1 class="section-heading" id="me-prog-head">
-                <span>Me and </span>
-                <span class="color-dark-orange">Programming</span>
-            </h1>
-            
-            <div class="ft-fira-sans-regular ft-sz-15 color-light-blue" id="me-prog-desc">
-                <p>I’m a programmer and I love coding. 
-                I’m self-taught and I started when I was 13 years old. I’ve been in love ever since. 
-                I don’t have a single particular area I specialise in, I’m interested in a lot of stuff.</p>
-
-                <p>Some of the things I do are:</p>
-                <ol>
-                    <li><span>Web Development</span></li>
-                    <li><span>App Development</span></li>
-                    <li><span>Machine Learning and AI</span></li>
-                    <li><span>Algorithms and Scripting</span></li>
-                    <li><span>Data Science, Databases, etc</span></li>
-                    <li><span>Robotics</span></li>
-                </ol>
-            </div>
-
-            <div class="ft-fira-sans-light-italic ft-sz-15" id="learn-more-btn">
-                <a href="#about">Learn more about me</a>
-            </div>
-
         </section>
+        
+        <section id="me-art-section" data-scroll-section>
+            <div class="quarter-div" id="quarter-div-1"></div>
+            <div class="quarter-div" id="quarter-div-2"></div>
+            <div class="quarter-div" id="quarter-div-3"></div>
+            <div class="quarter-div" id="quarter-div-4"></div>
 
-        <section id="me-art-section">
-            <div class="art-image-group" id="group-1">
+            <div class="art-image-group" id="group-1" data-scroll data-scroll-sticky data-scroll-target="#quarter-div-1">
                 <div class="art-scroll-bundler">
                     <div class="column" id="img-mr-bean">
                         <img src="home-page-images/mr-bean.jpg" alt="Realistic drawing of Mr Bean">
@@ -91,7 +106,7 @@
                 </div>
             </div>
 
-            <div class="art-image-group" id="group-2">
+            <div class="art-image-group" id="group-2"  data-scroll data-scroll-sticky data-scroll-target="#quarter-div-2">
                 <div class="art-scroll-bundler">
                     <div class="column" id="img-forever">
                         <img src="home-page-images/woman-forever-series.JPG" alt="Realistic drawing of a woman">
@@ -102,7 +117,7 @@
                 </div>
             </div>
             
-            <div class="art-image-group" id="group-3">
+            <div class="art-image-group" id="group-3" data-scroll data-scroll-sticky data-scroll-target="#quarter-div-3">
                 <div class="art-scroll-bundler">
                     <div class="column" id="img-taste">
                         <img src="home-page-images/taste-senses-series.JPG" alt="Realistic drawing of a person biting an apple">
@@ -113,7 +128,7 @@
                 </div>
             </div>
 
-            <div class="art-image-group" id="group-4">
+            <div class="art-image-group" id="group-4" data-scroll data-scroll-sticky data-scroll-target="#quarter-div-4">
                 <div class="art-scroll-bundler">
                     <div class="column" id="img-mystery-shores">
                         <img src="home-page-images/mystery-shores.JPG" alt="Realistic drawing of a beach on black paper">
@@ -130,35 +145,25 @@
                 <span class="color-dark-orange">Art</span>
             </h1>
             
-            <div class="ft-fira-sans-regular color-light-grey ft-sz-art-desc me-art-desc" id="me-art-desc-1">
-                    <span class="color-dark-orange">art</span> is a fantastic way to express thoughts and emotions in ways that are at times impossible to do so using words.
+            <!-- Small paragraphs accompanying each group of 2 images -->
+            <div class="ft-fira-sans-regular color-light-grey ft-sz-art-desc me-art-desc" id="me-art-desc-1" data-scroll data-scroll-sticky data-scroll-target="#quarter-div-1">
+                <span class="color-dark-orange">art</span> is a fantastic way to express thoughts and emotions in ways that are at times impossible to do so using words.
             </div>
-            <div class="ft-fira-sans-regular color-light-grey ft-sz-art-desc me-art-desc" id="me-art-desc-2">
+            <div class="ft-fira-sans-regular color-light-grey ft-sz-art-desc me-art-desc" id="me-art-desc-2" data-scroll data-scroll-sticky data-scroll-target="#quarter-div-2">
                 <p>it’s sort of become an extension of my <span class="color-dark-orange">linguistic</span> ability.</p><br>
                 <p>it allowes me to venture into my <span class="color-dark-orange">creative</span> side...and probably one or two extra crazy sides.</p>
             </div>
-            <!-- <div class="ft-fira-sans-regular color-light-grey ft-sz-40 me-art-desc" id="me-art-desc-3">
-                i like doodling characters and doing <span class="color-dark-orange">realistic</span> drawing.
-            </div> -->
-            <!-- <div class="ft-fira-sans-regular color-light-grey ft-sz-40 me-art-desc" id="me-art-desc-4">
-                art allowes me to venture into my <span class="color-dark-orange">creative</span> side
-            </div> -->
-            <!-- <div class="ft-fira-sans-regular color-light-grey ft-sz-40 me-art-desc" id="me-art-desc-5">
-                and probably one or two extra crazy sides.
-            </div> -->
-            <!-- <div class="ft-fira-sans-regular color-dark-grey ft-sz-40 me-art-desc" id="me-art-desc-6">
-                art is great at teaching patience and calmness. -->
-            <div class="ft-fira-sans-regular color-light-grey ft-sz-art-desc me-art-desc" id="me-art-desc-3">
+            <div class="ft-fira-sans-regular color-light-grey ft-sz-art-desc me-art-desc" id="me-art-desc-3" data-scroll data-scroll-sticky data-scroll-target="#quarter-div-3">
                 each single <span class="color-dark-orange">stroke</span> on the paper tells a story of how things that seem little go a
                 long way in the overall results,
             </div>
-            <div class="ft-fira-sans-regular color-light-grey ft-sz-art-desc me-art-desc" id="me-art-desc-4">
+            <div class="ft-fira-sans-regular color-light-grey ft-sz-art-desc me-art-desc" id="me-art-desc-4" data-scroll data-scroll-sticky data-scroll-target="#quarter-div-4">
                 given a little <span class="color-dark-orange">patience</span> of course.
             </div>
 
         </section>
 
-        <section id="curiosity-cad-section">
+        <section id="curiosity-cad-section" data-scroll-section>
 
             <div id="inspiring-words-wrapper">
                 <div class="ft-inter-light ft-sz-70" id="curiosity-rad-words">
@@ -187,7 +192,7 @@
 
         </section>
 
-        <section id="quote-section">
+        <section id="quote-section" data-scroll-section>
             <div class="ft-indie-flower ft-sz-70" id="picasso-quote">
                 Everything you can imagine is real.<br>
                 <div class="ft-fira-sans-light-italic ft-sz-20 color-dark-orange" id="pablo-name">
@@ -196,7 +201,7 @@
             </div>
         </section>
 
-        <footer class="ft-fira-sans-regular ft-sz-40" id="home-footer">
+        <footer class="ft-fira-sans-regular ft-sz-40" id="home-footer" data-scroll-section>
             <div class="ft-fira-sans-regular ft-sz-40" id="footer-contacts">
                 <div id="contact-page-link">
                     <a href="#contact-page">Contact Me Page</a>
@@ -218,13 +223,8 @@
                 Website by: <div class="ft-fira-sans-regular color-dark-orange">Tinotenda <br>Karambakuwa</div>
             </div>
         </footer>
+
     </div>
 </body>
-<script src="home.js"></script>
-<!-- <script>
-        const scroller = new LocomotiveScroll({
-            el: document.querySelector('[data-scroll-container]'),
-            smooth: true
-        });
-</script> -->
+<script src="home.js" type="module"></script>
 </html>

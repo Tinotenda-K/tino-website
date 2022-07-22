@@ -25,24 +25,6 @@ sz - size
     --quote-section-height: 100vh;
     --footer-height: 65vh;
 }
-
-/* ::-webkit-scrollbar {
-    width: 15px;
-}
-
-::-webkit-scrollbar-track {
-    display: none;
-}
-
-::-webkit-scrollbar-track-piece {
-    display: none;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: black;
-    height: 5%;
-} */
-/* , screen and (min-height: 700px) */
 :root {
     font-size: min(1.3vw, 2.4vh);
 }
@@ -50,16 +32,17 @@ sz - size
 
 html, body {
     height: 100%;
-    overflow-x: hidden;
 }
 
 #content-wrapper {
-    /* position: absolute; */
     top: 0;
     left: 0; 
-    /* width: 100%;
-    height: 100%; */
     min-width: 300px;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
 }
 
 .material-symbols-outlined {
@@ -71,13 +54,20 @@ html, body {
 }
 
 section {
-    /* height: 100%;
-    width: 100%; */
     display: block;
     min-height: 700px;
     min-width: 300px;
     width: 100vw;
     position: relative;
+}
+
+.show {
+    /* Remember to change this into a transition. 
+    What is a user scrolls too fast? The website is weirdly loading from opacity 1 -> 0 -> 1 */
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
 
 /* 
@@ -186,6 +176,60 @@ Start of font definitions
 End of font definitions
 */
 
+/* 
+-----------------------------------------------------------
+Animations
+-----------------------------------------------------------
+*/
+
+@keyframes slideWelcomeWordsUp {
+
+    0% {
+        transform: translateY(500%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeInWelcomeDescription {
+
+    0% { 
+        opacity: 0;
+        transform-origin: left;
+        transform: scale(0.3) rotateX(-80deg);
+        bottom: 8rem;
+        left: 0rem;
+    }
+
+    100% {
+        opacity: 1;
+        transform-origin: left;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInMenuBtn {
+    0% {
+        transform: translateX(200%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 /* 
 Section 1 - Home Page
@@ -194,39 +238,69 @@ Important: .section-heading is defined somewhere in the font size and font type 
             - it's basically hitch-hiking on other fonts.
 */
 #welcome-section {
-    /* position: absolute; */
     background-image: url(home-page-images/tino-bridge-16-9-aspect.jpg);
     background-color: #CCCCCC;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    /* top: 0;
-    left: 0; */
     height: var(--home-section-height);
-}
+    animation-name: fadeIn;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+} 
 
 #welcome-msg-container {
     position: absolute;
     top: 5rem;
     left: 5rem;
     width: 70vw;
-    /* line-height: 5rem; */
-    line-height: 15vh;
+    line-height: 16vh;
+}
+
+#welcome-msg-container div {
+    position: relative;
+    height: 30%;
+    width: fit-content;
+    overflow: hidden;
+}
+
+.welcome-word {
+    display: inline-block;
+}
+
+#hi-there-container {
+    top: 0%;
+    left: 0%;
+}
+
+#im-tino-container {
+    top: 30%;
+    left: 0%;
 }
 
 #welcome-site-container {
-    /* line-height: 4rem; */
-    line-height: 4rem;
-    padding-top: max(2.5vh, 20px);
-    padding-bottom: 2rem;
+    top: 60%;
+    left: 0%;
+    line-height: 15vh;
+    /* line-height: 6rem; */
+    /* padding-top: max(2.5vh, 20px);
+    padding-bottom: 2rem; */
 }
+
 
 #welcome-description {
     position: absolute;
     bottom: 3rem;
     left: 5rem;
     padding-right: 2rem;
+    animation-name: fadeInWelcomeDescription;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-delay: 2s;
+    animation-fill-mode: both;
 }
 
 #welcome-menu-btn {
@@ -245,9 +319,6 @@ Section 2 - Me and Programming
 
 #me-programming-section {
     /* Poperties of section description under a Programming section head. */
-    /* position: relative; */
-    /* top: var(--home-section-height);
-    left: 0; */
     height: var(--prog-section-height);
 }
 
@@ -362,12 +433,9 @@ Section 3 - Me and Art
 */
 
 #me-art-section {
-    /* position: relative; */
     background-color: var(--seashell-grey);
     height: var(--art-section-height);
-    min-height: 3600px;
-    /* top: calc(var(--home-section-height) + var(--prog-section-height));
-    left: 0; */
+    min-height: 7000px;
 }
 
 /* 
@@ -494,6 +562,28 @@ Group 1
     left: 0;
 }
 
+.quarter-div {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+}
+
+#quarter-div-1 {
+    top: 4%;
+}
+
+#quarter-div-2 {
+    top: 29%;
+}
+
+#quarter-div-3 {
+    top: 54%;
+}
+
+#quarter-div-4 {
+    top: 79%;
+}
+
 
 
 /* 
@@ -501,13 +591,10 @@ Section 4 - Curiosity and Radical Thinking
 */
 
 #curiosity-cad-section {
-    /* position: relative; */
     background-color: black;
     color: white;
     height: var(--cad-section-height);
     min-height: 2400px;
-    /* top: calc(var(--home-section-height) + var(--prog-section-height) + var(--art-section-height));
-    left: 0; */
 }
 
 #inspiring-words-wrapper {
@@ -519,13 +606,6 @@ Section 4 - Curiosity and Radical Thinking
     padding-left: 4rem;
     padding-right: 1rem;
 }
-
-/* #curiosity-rad-words {
-    
-}
-
-#deri-words {
-} */
 
 #why-learn-cad {
     display: inline-block;
@@ -569,12 +649,9 @@ Section 5 - Pablo Picasso quote
 */
 
 #quote-section {
-    /* position: absolute; */
     height: var(--quote-section-height);
     width: 100%;
     min-height: 700px;
-    /* top: calc(var(--home-section-height) + var(--prog-section-height) + var(--art-section-height) + var(--cad-section-height));
-    left: 0vh; */
 }
 
 #pablo-name {
@@ -603,8 +680,6 @@ Footer - Contact information, etc
     font-size: 1.5rem;
     height: var(--footer-height);
     min-height: 385px;
-    /* top: calc(var(--home-section-height) + var(--prog-section-height) + var(--art-section-height) + var(--cad-section-height) + var(--quote-section-height));
-    left: 0; */
 }
 
 #home-footer a:link, a:visited{
@@ -691,7 +766,7 @@ General queries
         }
         
         #welcome-site-container {
-            line-height: 80px;
+            line-height: 90px;
         }
     }
 }
@@ -717,11 +792,6 @@ General queries
     }
 }
 
-/* @media screen and (orientation:portrait) {
-    :root {
-        font-size: 1.7vh;
-    }
-} */
 /* Section 2 - Me and Programming Section */
 
 @media screen and (orientation: landscape) and (max-width:1350px) {
@@ -747,16 +817,16 @@ General queries
         font-size: 35px;
         width: 28vw;
     }
-
-    /* @media (max-height: 700px) {
-
-    }*/
 }
 
 @media screen and (max-width: 1200px) {
     /* 
     Art Section
     */
+
+    #me-art-section {
+        min-height: 5000px;
+    }
 
     #me-art-section img {
         width: 300px;
@@ -880,7 +950,7 @@ General queries
     */
     .cad-images {
         left: 3%;
-        width: 94%;
+        width: 97%;
         height: auto;
     }
     
@@ -958,6 +1028,13 @@ General queries
         left: 0;
         text-align: center;
         font-size: 1.4rem;
+    }
+
+    /* 
+    Me Art Section
+    */
+    #me-art-section {
+        min-height: 3600px;
     }
 
     /* 
@@ -1043,7 +1120,3 @@ General queries
         }
     }
 }
-
-
-
-
