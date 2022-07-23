@@ -307,7 +307,7 @@ Important: .section-heading is defined somewhere in the font size and font type 
     display: block;
     position: absolute;
     font-size: 7rem;
-    top: 5rem;
+    top: 7rem;
     right: 5rem;
 }
 
@@ -794,14 +794,15 @@ General queries
 
 /* Section 2 - Me and Programming Section */
 
-@media screen and (orientation: landscape) and (max-width:1350px) {
+/* @media screen and (orientation: landscape) and (max-width:1350px) { */
+@media screen and (max-width:1350px) {
     :root {
         /* font-size: min(1.5vw, 3vh); */
         font-size: 15px;
     }
 
     #welcome-menu-btn {
-        top: 5rem;
+        top: 8rem;
     }
 
     #welcome-msg-container {
@@ -929,7 +930,7 @@ General queries
     }
 
     #welcome-menu-btn {
-        top: 5.5rem;
+        top: 7rem;
     }
 
     #welcome-msg-container {
@@ -1060,7 +1061,7 @@ General queries
 
     #welcome-menu-btn {
         right: 5rem;
-        top: max(5rem, 60px);
+        top: max(8rem, 60px);
     }
 
     #welcome-description {
@@ -1105,7 +1106,7 @@ General queries
     }
 
     #welcome-menu-btn {
-        top: 7rem;
+        top: 9rem;
         right: 1rem
     }
 
