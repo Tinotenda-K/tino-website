@@ -24,6 +24,8 @@ sz - size
     --cad-section-height: 350vh;
     --quote-section-height: 100vh;
     --footer-height: 65vh;
+    --nav-height: 100vh;
+    -webkit-appearance: none;
 }
 :root {
     font-size: min(1.3vw, 2.4vh);
@@ -53,17 +55,22 @@ html, body {
   'opsz' 48
 }
 
+
 section {
     display: block;
     min-height: 700px;
     min-width: 300px;
     width: 100vw;
+    max-width: 1500px;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
 }
 
 .show {
     /* Remember to change this into a transition. 
-    What is a user scrolls too fast? The website is weirdly loading from opacity 1 -> 0 -> 1 */
+    What if a user scrolls too fast? The website is weirdly loading from opacity 1 -> 0 -> 1 */
     animation-name: fadeIn;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
@@ -164,6 +171,10 @@ Start of font definitions
     font-size: 2rem;
 }
 
+.ft-sz-30 {
+    font-size: 1.7rem;
+}
+
 .ft-sz-20 {
     font-size: 1.25rem;
 }
@@ -230,6 +241,89 @@ Animations
     }
 }
 
+@keyframes growCircle {
+    0% {
+        /* transform: scale(0); */
+        /* top: 9rem;
+        right: 8rem; */
+        transform: scale(1);
+        transform-origin: center middle;
+    }
+     
+    100% {
+        transform: scale(250);
+        transform-origin: center middle;
+    }
+}
+
+@keyframes shrinkCircle {
+    0% {
+        /* transform: scale(0); */
+        /* top: 9rem;
+        right: 8rem; */
+        transform: scale(250);
+        transform-origin: center middle;
+    }
+     
+    100% {
+        transform: scale(1);
+        transform-origin: center middle;
+    }
+}
+
+
+#website-nav {
+    display: none;
+    position: absolute;
+    background-color: var(--dark-grey);
+    height: var(--nav-height);
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#nav-growing-circle {
+    /* display: none; */
+    display: block;
+    position: absolute;
+    top: 9rem;
+    right: 8rem;
+    width: max(1vh, 1vw);
+    height: max(1vh, 1vw);
+    border-radius: 100%;
+    background-color: var(--dark-grey);
+    z-index: 100;
+}
+
+#page-list {
+    position: absolute;
+    top: 3rem;
+    left: 5rem;
+    width: 50%;
+    height: 80%;
+    line-height: 8rem;
+    list-style-type: none;
+}
+
+#page-list a:link,
+#page-list a:active,
+#page-list a:visited,
+#page-list a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+/* #menu-exit-btn{
+    display: block;
+    position: absolute;
+    font-size: 7rem;
+    top: 6rem;
+    right: 5rem;
+    cursor: pointer;
+} */
+
 
 /* 
 Section 1 - Home Page
@@ -245,18 +339,26 @@ Important: .section-heading is defined somewhere in the font size and font type 
     background-position: center;
     background-attachment: fixed;
     height: var(--home-section-height);
+    min-height: 700px;
+    max-width: none;
     animation-name: fadeIn;
     animation-duration: 2.5s;
     animation-iteration-count: 1;
     animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
 } 
 
+#welcome-section>div {
+    width: 100%;
+    height: 100%;
+}
+
 #welcome-msg-container {
     position: absolute;
+    /* top: 5rem; */
     top: 5rem;
     left: 5rem;
     width: 70vw;
-    line-height: 16vh;
+    line-height: 10rem;
 }
 
 #welcome-msg-container div {
@@ -281,10 +383,10 @@ Important: .section-heading is defined somewhere in the font size and font type 
 }
 
 #welcome-site-container {
+    padding-top: 2%;
     top: 60%;
     left: 0%;
-    line-height: 15vh;
-    /* line-height: 6rem; */
+    line-height: 6rem;
     /* padding-top: max(2.5vh, 20px);
     padding-bottom: 2rem; */
 }
@@ -303,15 +405,22 @@ Important: .section-heading is defined somewhere in the font size and font type 
     animation-fill-mode: both;
 }
 
+#menu-exit-btn,
 #welcome-menu-btn {
     display: block;
     position: absolute;
     font-size: 7rem;
-    top: 7rem;
+    top: 6rem;
     right: 5rem;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
 }
 
-
+#menu-exit-btn:hover,
+#welcome-menu-btn:hover {
+    color: var(--dark-orange);
+}
 
 /* 
 Section 2 - Me and Programming
@@ -435,7 +544,8 @@ Section 3 - Me and Art
 #me-art-section {
     background-color: var(--seashell-grey);
     height: var(--art-section-height);
-    min-height: 7000px;
+    /* min-height: 7000px; */
+    min-height: 3600px;
 }
 
 /* 
@@ -508,7 +618,7 @@ Group 1
 .me-art-desc {
     display: inline-block;
     position: absolute;
-    width: 30vw;
+    width: 30%;
     line-height: 4rem;
 }
 
@@ -561,30 +671,6 @@ Group 1
     top: 80%;
     left: 0;
 }
-
-.quarter-div {
-    position: absolute;
-    width: 100%;
-    height: 20%;
-}
-
-#quarter-div-1 {
-    top: 4%;
-}
-
-#quarter-div-2 {
-    top: 29%;
-}
-
-#quarter-div-3 {
-    top: 54%;
-}
-
-#quarter-div-4 {
-    top: 79%;
-}
-
-
 
 /* 
 Section 4 - Curiosity and Radical Thinking
@@ -728,7 +814,7 @@ Footer - Contact information, etc
 
 #tino-author {
     position: absolute;
-    width: 10rem;
+    width: 8rem;
     height: 5rem;
     right: 2rem;
     bottom: 2rem;
@@ -739,11 +825,11 @@ Footer - Contact information, etc
     border-bottom-left-radius: 2rem;
 }
 
-#tino-author div {
+/* #tino-author div {
     position: absolute;
     left: 10%;
     top: 30%;
-}
+} */
 
 /* 
 
@@ -756,39 +842,27 @@ Media queries
 General queries
 */
 
-
-
-@media screen and (min-width: 1000px) {
-    @media (max-height: 700px) {
-        
-        #welcome-msg-container {
-            line-height: 100px;
-        }
-        
-        #welcome-site-container {
-            line-height: 90px;
-        }
-    }
+@media screen and (min-width:1000px) and (max-width:1350px){
+    /* #welcome-section {
+        min-height: 600px;
+    } */
 }
 
 @media screen and (min-width:1350px) {
     :root {
         /* font-size: 15px; */
-        font-size: min(1.1vw, 2.8vh);
+        font-size: 14px;
     }
-    
-    @media (max-height: 700px) {
-        
-        :root {
-            font-size: 16px;
-        }
-    }
+
+    /* #welcome-section {
+        min-height: 900px;
+    } */
 }
 
 @media screen and (min-width:1800px) {
     :root {
         /* font-size: 15px; */
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 
@@ -798,26 +872,26 @@ General queries
 @media screen and (max-width:1350px) {
     :root {
         /* font-size: min(1.5vw, 3vh); */
-        font-size: 15px;
+        font-size: 14px;
     }
 
-    #welcome-menu-btn {
+    /* #welcome-menu-btn {
         top: 8rem;
-    }
+    } */
 
-    #welcome-msg-container {
+    /* #welcome-msg-container {
         line-height: max(16vh, 119px);
     }
 
 
     #welcome-site-container {
         line-height: max(10vh, 70px);
-    }
+    } */
 
-    .me-art-desc {
+    /* .me-art-desc {
         font-size: 35px;
         width: 28vw;
-    }
+    } */
 }
 
 @media screen and (max-width: 1200px) {
@@ -911,6 +985,7 @@ General queries
         top: 86%;
         left: unset;
     }
+    
 }
 
 @media screen and (max-width:1000px) {
@@ -923,11 +998,12 @@ General queries
     } */
     :root {
         /* font-size: min(1.6vw, 3vh); */
-        font-size: 14px;
+        font-size: 13px;
     }
     #welcome-section {
         background-attachment: scroll;
     }
+    
 
     #welcome-menu-btn {
         top: 7rem;
@@ -1079,13 +1155,10 @@ General queries
     }
 
     #home-footer a:link, a:visited {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     #tino-author {
-        width: 6rem;
-        padding-left: 0.4rem;
-        padding-bottom: 0rem;
         border-left: 5px solid var(--dark-grey);
         border-bottom: 2px solid var(--dark-grey);
     }
@@ -1097,7 +1170,7 @@ General queries
 
 @media screen  and (max-width: 450px){
     :root {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     #welcome-site-container {

@@ -14,7 +14,18 @@
 </head>
 <body>
     <div id="content-wrapper" data-scroll-container>
-        
+        <nav id="website-nav">
+            <div id="menu-exit-btn" class="material-symbols-outlined color-light-orange">
+                close
+            </div>
+
+            <ul id="page-list" class="ft-lato-light ft-sz-70">
+                <li><a id="home-link" href="#">Home</a></li>
+                <li><a id="about-link" href="#">About</a></li>
+                <li><a id="contact-link" href="#">Contact Tino</a></li>
+            </ul>
+        </nav>
+
         <section id="welcome-section" data-scroll-section>
             <div>
                 <div class="ft-inter-light ft-sz-70" id="welcome-msg-container">
@@ -35,6 +46,9 @@
                         <span class="welcome-word" data-scroll data-scroll-direction="vertical" data-scroll-target="#welcome-section" data-scroll-speed="-2" data-scroll-repeat>my</span>
                         <span class="welcome-word" data-scroll data-scroll-direction="horizontal" data-scroll-target="#welcome-section" data-scroll-speed="-2" data-scroll-repeat>website</span>
                     </div>
+                </div>
+
+                <div id="nav-growing-circle" class="nav-bar-open">
                 </div>
 
                 <div id="welcome-menu-btn" class="material-symbols-outlined color-light-orange">
@@ -90,12 +104,7 @@
         </section>
         
         <section id="me-art-section" data-scroll-section>
-            <div class="quarter-div" id="quarter-div-1"></div>
-            <div class="quarter-div" id="quarter-div-2"></div>
-            <div class="quarter-div" id="quarter-div-3"></div>
-            <div class="quarter-div" id="quarter-div-4"></div>
-
-            <div class="art-image-group" id="group-1" data-scroll data-scroll-sticky data-scroll-target="#quarter-div-1">
+            <div class="art-image-group" id="group-1">
                 <div class="art-scroll-bundler">
                     <div class="column" id="img-mr-bean">
                         <img src="home-page-images/mr-bean.jpg" alt="Realistic drawing of Mr Bean">
@@ -106,7 +115,7 @@
                 </div>
             </div>
 
-            <div class="art-image-group" id="group-2"  data-scroll data-scroll-sticky data-scroll-target="#quarter-div-2">
+            <div class="art-image-group" id="group-2">
                 <div class="art-scroll-bundler">
                     <div class="column" id="img-forever">
                         <img src="home-page-images/woman-forever-series.JPG" alt="Realistic drawing of a woman">
@@ -117,7 +126,7 @@
                 </div>
             </div>
             
-            <div class="art-image-group" id="group-3" data-scroll data-scroll-sticky data-scroll-target="#quarter-div-3">
+            <div class="art-image-group" id="group-3">
                 <div class="art-scroll-bundler">
                     <div class="column" id="img-taste">
                         <img src="home-page-images/taste-senses-series.JPG" alt="Realistic drawing of a person biting an apple">
@@ -128,7 +137,7 @@
                 </div>
             </div>
 
-            <div class="art-image-group" id="group-4" data-scroll data-scroll-sticky data-scroll-target="#quarter-div-4">
+            <div class="art-image-group" id="group-4">
                 <div class="art-scroll-bundler">
                     <div class="column" id="img-mystery-shores">
                         <img src="home-page-images/mystery-shores.JPG" alt="Realistic drawing of a beach on black paper">
@@ -145,19 +154,18 @@
                 <span class="color-dark-orange">Art</span>
             </h1>
             
-            <!-- Small paragraphs accompanying each group of 2 images -->
-            <div class="ft-fira-sans-regular color-light-grey ft-sz-art-desc me-art-desc" id="me-art-desc-1" data-scroll data-scroll-sticky data-scroll-target="#quarter-div-1">
+            <div class="ft-fira-sans-regular color-light-grey ft-sz-art-desc me-art-desc" id="me-art-desc-1">
                 <span class="color-dark-orange">art</span> is a fantastic way to express thoughts and emotions in ways that are at times impossible to do so using words.
             </div>
-            <div class="ft-fira-sans-regular color-light-grey ft-sz-art-desc me-art-desc" id="me-art-desc-2" data-scroll data-scroll-sticky data-scroll-target="#quarter-div-2">
+            <div class="ft-fira-sans-regular color-light-grey ft-sz-art-desc me-art-desc" id="me-art-desc-2">
                 <p>it’s sort of become an extension of my <span class="color-dark-orange">linguistic</span> ability.</p><br>
                 <p>it allowes me to venture into my <span class="color-dark-orange">creative</span> side...and probably one or two extra crazy sides.</p>
             </div>
-            <div class="ft-fira-sans-regular color-light-grey ft-sz-art-desc me-art-desc" id="me-art-desc-3" data-scroll data-scroll-sticky data-scroll-target="#quarter-div-3">
+            <div class="ft-fira-sans-regular color-light-grey ft-sz-art-desc me-art-desc" id="me-art-desc-3">
                 each single <span class="color-dark-orange">stroke</span> on the paper tells a story of how things that seem little go a
                 long way in the overall results,
             </div>
-            <div class="ft-fira-sans-regular color-light-grey ft-sz-art-desc me-art-desc" id="me-art-desc-4" data-scroll data-scroll-sticky data-scroll-target="#quarter-div-4">
+            <div class="ft-fira-sans-regular color-light-grey ft-sz-art-desc me-art-desc" id="me-art-desc-4">
                 given a little <span class="color-dark-orange">patience</span> of course.
             </div>
 
@@ -201,8 +209,8 @@
             </div>
         </section>
 
-        <footer class="ft-fira-sans-regular ft-sz-40" id="home-footer" data-scroll-section>
-            <div class="ft-fira-sans-regular ft-sz-40" id="footer-contacts">
+        <footer class="ft-fira-sans-regular" id="home-footer" data-scroll-section>
+            <div class="ft-fira-sans-regular ft-sz-30" id="footer-contacts">
                 <div id="contact-page-link">
                     <a href="#contact-page">Contact Me Page</a>
                 </div>

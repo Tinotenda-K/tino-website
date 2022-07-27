@@ -15,33 +15,32 @@
 <body>
     <div data-scroll-container>
     <div data-scroll-section>
-        <h1 class="ft-inter-light ft-sz-40" id="h1-how-contact" data-scroll>
-            How to <span class="color-dark-orange">contact</span> me?
-        </h1>
+        <div id="header-container">
+            <div id="header-image"></div>
+            <h1 class="ft-inter-light ft-sz-70 color-white" id="h1-how-contact" data-scroll>
+                How to <span class="color-light-orange">contact</span> Tino
+            </h1>
 
-        <div id="welcome-menu-btn" class="material-symbols-outlined color-light-orange">
-            menu
+            <div id="welcome-menu-btn" class="material-symbols-outlined color-light-orange ft-sz-70">
+                menu
+            </div>
         </div>
 
-        <div class="ft-fira-sans-regular ft-sz-30" id="contact-options-words" data-scroll>
-            <div id="via-email-or-form">
-                <p>via email:</p>
-                <p>OR</p>
+        <div class="ft-fira-sans-regular ft-sz-20" id="contact-options-words" data-scroll>
+            <div id="via-email">
+                <h1 class="ft-lato-regular ft-sz-30">Contact via email</h1>
+                <div id="email-component">
+                    <span id="contact-email-icon" class="material-symbols-outlined color-light-orange ft-sz-40">
+                        mail
+                    </span>
+                    <a id="contact-email-link" href="mailto:karambakuwatinotenda@gmail.com">karambakuwatinotenda@gmail.com</a>
+                </div>
+                <h1 class="ft-lato-regular ft-sz-30">Or</h1>
                 <p>fill out this enquiry form:</p>
             </div>
-
-            <div id="mail-component">
-                <span id="email-icon" class="material-symbols-outlined color-light-orange">
-                    mail
-                </span>
-                <span id="mail-link">
-                    <a href="mailto:karambakuwatinotenda@gmail.com">karambakuwatinotenda@gmail.com</a>
-                </span>
-            </div>
         </div>
-
-        <form action="" method="post" class="ft-fira-sans-regular ft-sz-16" id="enquiry-form">
-
+        <form action="" method="post" class="ft-fira-sans-regular ft-sz-16" id="enquiry-form" data-scroll>
+            
             <div id="return-email-block" data-scroll>
                 <label for="return-email">
                     <p>Return email address:</p>
@@ -55,10 +54,31 @@
                 <textarea type="text" name="feedback" id="feedback"></textarea>
             </div>
 
-            <div id="submit-block" data-scroll>
-                <button type="submit">Submit</button>
-            </div>
+            <input class="ft-inter-regular ft-sz-16" type="submit" id="submit-btn" value="Send message to Tino">
+           
         </form>
+        <footer class="ft-fira-sans-regular" id="contact-footer">
+            <div class="ft-fira-sans-regular ft-sz-30" id="footer-contacts">
+                <div id="contact-page-link">
+                    <a href="#contact-page">Contact Me Page</a>
+                </div>
+
+                <div id="email-link">
+                    <a href="#email">karambakuwatinotenda@gmail.com</a>
+                </div>
+
+                <div id="instagram-link">
+                    <a href="#instagram">Instagram</a>
+                </div>
+
+                <div id="linked-in-link">
+                    <a href="#linkedIn">LinkedIn</a>
+                </div>
+            </div>
+            <div class="ft-lato-light ft-sz-16" id="tino-author">
+                Website by: <div class="ft-fira-sans-regular color-dark-orange">Tinotenda <br>Karambakuwa</div>
+            </div>
+        </footer>
     </div>
     </div>
 </body>
