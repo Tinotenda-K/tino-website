@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Tino</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,400;1,300&family=Indie+Flower&family=Inter:wght@300;400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="/node_modules/locomotive-scroll/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div data-scroll-container>
+    <div data-scroll-section>
+        <div id="header-container">
+            <div id="header-image"></div>
+            <h1 class="ft-inter-light ft-sz-70 color-white" id="h1-how-contact" data-scroll>
+                How to <span class="color-light-orange">contact</span> Tino
+            </h1>
+
+            <div id="welcome-menu-btn" class="material-symbols-outlined color-light-orange ft-sz-70">
+                menu
+            </div>
+        </div>
+
+        <div class="ft-fira-sans-regular ft-sz-20" id="contact-options-words" data-scroll>
+            <div id="via-email">
+                <h1 class="ft-lato-regular ft-sz-30">Contact via email</h1>
+                <div id="email-component">
+                    <span id="contact-email-icon" class="material-symbols-outlined color-light-orange ft-sz-40">
+                        mail
+                    </span>
+                    <a id="contact-email-link" href="mailto:karambakuwatinotenda@gmail.com">karambakuwatinotenda@gmail.com</a>
+                </div>
+                <h1 class="ft-lato-regular ft-sz-30">Or</h1>
+                <p>fill out this enquiry form:</p>
+            </div>
+        </div>
+        <form action="" method="post" class="ft-fira-sans-regular ft-sz-16" id="enquiry-form" data-scroll>
+            
+            <div id="return-email-block" data-scroll>
+                <label for="return-email">
+                    <p>Return email address:</p>
+                    <p>(optional)</p>
+                </label>
+                <input type="email" name="return-email" id="return-email">
+            </div>
+
+            <div id="feedback-block" data-scroll>
+                <label for="feedback">Your message:</label>
+                <textarea type="text" name="feedback" id="feedback"></textarea>
+            </div>
+
+            <input class="ft-inter-regular ft-sz-16" type="submit" id="submit-btn" value="Send message to Tino">
+           
+        </form>
+        <footer class="ft-fira-sans-regular" id="contact-footer">
+            <div class="ft-fira-sans-regular ft-sz-30" id="footer-contacts">
+                <div id="contact-page-link">
+                    <a href="#contact-page">Contact Me Page</a>
+                </div>
+
+                <div id="email-link">
+                    <a href="#email">karambakuwatinotenda@gmail.com</a>
+                </div>
+
+                <div id="instagram-link">
+                    <a href="#instagram">Instagram</a>
+                </div>
+
+                <div id="linked-in-link">
+                    <a href="#linkedIn">LinkedIn</a>
+                </div>
+            </div>
+            <div class="ft-lato-light ft-sz-16" id="tino-author">
+                Website by: <div class="ft-fira-sans-regular color-dark-orange">Tinotenda <br>Karambakuwa</div>
+            </div>
+        </footer>
+    </div>
+    </div>
+</body>
+<script src="contact.js" type="module"></script>
+</html>

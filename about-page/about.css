@@ -1,0 +1,436 @@
+/* 
+Styling for Tino's Website Home Page 
+
+ft - font
+sz - size
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --light-orange: #FFB45B;
+    --dark-orange: #C97817;
+    --dark-grey: #8a8a8a;
+    --light-grey: #9C9C9C;
+    --light-blue: #B8D1DF;
+    --seashell-grey: #F2F0F0;
+    --deep-sea-green: #084D54;
+    --footer-height: 65vh;
+    -webkit-appearance: none;
+}
+
+html, body {
+    min-height: 600px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+/* 
+Start of text color definitions
+*/
+.color-light-orange {
+    color: var(--light-orange);
+}
+
+.color-dark-orange {
+    color: var(--dark-orange);
+}
+
+.color-white {
+    color: white;
+}
+
+.color-dark-grey {
+    color: var(--dark-grey);
+}
+
+.color-light-grey {
+    color: var(--light-grey);
+}
+
+.color-light-blue {
+    color: var(--light-blue);
+}
+/* 
+End of text color definitions
+*/
+
+
+/* 
+Start of font definitions 
+*/
+
+.ft-inter-light {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+.ft-inter-regular {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.ft-lato-light {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+.section-heading,
+.ft-lato-regular {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+.ft-fira-sans-extra-light {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 200;
+}
+
+.ft-fira-sans-light-italic {
+    font-family: 'Fira Sans', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.ft-fira-sans-regular {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+}
+
+.ft-indie-flower {
+    font-family: 'Indie Flower', cursive;
+    font-weight: 400;
+}
+
+.ft-sz-70 {
+    font-size: 4.9rem;
+}
+
+.section-heading,
+.ft-sz-40 {
+    font-size: 2.5rem;
+}
+
+.ft-sz-30 {
+    font-size: 1.7rem;
+}
+
+.ft-sz-art-desc {
+    font-size: 2.3rem;
+}
+
+.ft-sz-cad-why-learn {
+    font-size: 2rem;
+}
+
+.ft-sz-20 {
+    font-size: 1.25rem;
+}
+
+.ft-sz-16 {
+    font-size: 1rem;
+}
+
+/* 
+End of font definitions
+*/
+
+#header-container {
+    position: relative;
+    width: 100vw;
+    height: max(60vh, 300px);
+    top: 0;
+    left: 0;
+}
+
+#header-image {
+    background-image: url("about-page-images/mountain-nature.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(40%);
+    position: relative;
+    height: 100%;
+    width: 100%;
+    
+}
+
+#h1-about-tino {
+    position: absolute;
+    width: fit-content;
+    height: 3rem;
+    top: 33%;
+    left: 5%;
+}
+
+#welcome-menu-btn {
+    position: absolute;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    font-size: 7rem;
+    top: 33%;
+    /* right: 15%; */
+    right: 5rem;
+}
+
+#content-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 80vh;
+    min-height: 700px;
+}
+
+.data-column {
+    display: block;
+    position: absolute;
+    width: 46%;
+    /* height: fit-content; */
+    line-height: 2.2rem;
+    max-width: 800px;
+}
+
+#data-column-1 {
+    padding-right: 1rem;
+    left: 4%;
+    top: 12%;
+}
+
+#data-column-2 {
+    padding: 0 1rem 0;
+    /* left: 50%; */
+    left: 50%;
+    top: 20%;
+    border-left: 1px solid var(--dark-grey);
+}
+
+#about-footer {
+    position: relative;
+    background-color: var(--seashell-grey);
+    font-size: 1.5rem;
+    height: var(--footer-height);
+    min-height: 385px;
+    bottom: 0;
+}
+
+#about-footer a:link, a:visited{
+    display: inline-block;
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    width: fit-content;
+    height: auto;
+    cursor: pointer;
+}
+
+
+#about-footer a:hover{
+    color: var(--dark-orange)
+}
+
+#about-footer a:active{
+    color: var(--deep-sea-green);
+}
+
+#footer-contacts {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    justify-content: space-around;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 8vw;
+}
+
+
+#footer-contacts div {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+    
+}
+
+#tino-author {
+    position: absolute;
+    width: 8rem;
+    height: 5rem;
+    right: 2rem;
+    bottom: 2rem;
+    padding-left: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-left: 8px solid var(--dark-grey);
+    border-bottom: 3px solid var(--dark-grey);
+    border-bottom-left-radius: 2rem;
+}
+
+/* #tino-author div {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+} */
+
+
+@media screen and (min-width:1350px) {
+    root {
+        /* font-size: 15px; */
+        font-size: 14px;
+    }
+    
+    /* @media (max-height: 700px) {
+        
+        :root {
+            font-size: 16px;
+        }
+    } */
+}
+
+@media screen and (min-width:1800px) {
+    :root {
+        /* font-size: 15px; */
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:1350px) {
+    :root {
+        /* font-size: 17.55px; */
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    :root {
+        /* font-size: min(1.6vw, 3vh); */
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    :root {
+        /* font-size: 16.8px; */
+        /* font-size: 13px; */
+    }
+
+    #content-wrapper, footer{
+        position: static;
+        height: max-content;
+    }
+
+    #content-wrapper {
+        width: 90%;
+        /* position: absolute; */
+        /* left: 5%;
+        top: 6rem; */
+        margin-left: 5%;
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+        padding-bottom: 2rem;
+    }
+
+    /* #h1-about-tino {
+        left: 10%;
+        top: 5rem;
+    } */
+    
+    .data-column {
+        position: static;
+        width: 100%;
+        height: fit-content;
+        line-height: 3.2rem;
+    }
+
+    .data-column p {
+        padding: 1.5rem;
+        border: 1px solid var(--dark-orange);
+        border-radius: 1rem;
+    }
+
+    #data-column-1 {
+        padding: 0;
+    }
+    
+    #data-column-2 {
+        padding: 0;
+        padding-top: 2rem;
+        border: unset;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    
+    :root {
+        /* font-size: 2vw; */
+        font-size: 12px;
+    }
+
+     /* 
+    Footer
+    */
+
+    #about-footer {
+        height: 40vh;
+        min-height: 230px;
+    }
+
+    #about-footer a:link, a:visited {
+        font-size: 2rem;
+    }
+
+    #tino-author {
+        border-left: 5px solid var(--dark-grey);
+        border-bottom: 2px solid var(--dark-grey);
+    }
+
+    /* #tino */
+}
+
+@media screen and (max-width:600px) {
+
+    #welcome-menu-btn {
+        right: 1rem;
+        top: 19%;
+    }
+
+    #h1-about-tino {
+        left: 5%;
+        top: 20%;
+    }
+}
+
+@media screen  and (max-width: 450px){
+    :root {
+        font-size: 8px;
+    }
+    
+    .data-column {
+        font-size: 11px;
+    }
+
+    /* #welcome-menu-btn {
+        font-size: 5rem;
+        top: 4.5rem;
+    } */
+}
+
+/* @media screen and (max-height: 700px) {
+    :root {
+        font-size: 16.8px;
+    }
+} */
